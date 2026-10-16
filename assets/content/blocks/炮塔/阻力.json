@@ -1,0 +1,90 @@
+{
+	"type": "ItemTurret",//类型
+	"category": "turret",//菜单栏
+	"name": "阻力",//名字
+	"description": "发射穿甲弹，对敌人的进攻形成阻力。",//介绍
+	"details":"至少对于低阶单位来说，阻力可以轻易撕碎他们",
+	"requirements": {
+    "parent": "duo",
+    "requirements": [
+    "copper/2000",
+	"lead/2000",
+	"graphite/2000",
+	"silicon/2000",
+	"thorium/2000",
+	"titanium/2000"
+    ]
+    },
+	"drawer": {
+	"type": "drawTurret"},
+	"requirements": [
+	{ "item":"copper","amount":140}
+	{ "item":"lead","amount":100}
+	{ "item":"graphite","amount":55}	],
+	"size": 2,//大小
+	"health": 850,//血量
+	"rotateSpeed": 3.8,//转头速度
+	"maxAmmo":30,//弹药容量
+	"reload": 35,//装填速度
+	"ammoPerShot":2,//单发消耗
+	"shootSound": "shootBig",//发射音效
+	"range": 210,//范围
+	"inaccuracy":1.8,//不准确度
+	"shoot":{"shots":1,//每轮子弹
+		"shotDelay":2}//子弹间隔
+	"consumes": {//消耗
+	"coolant":{"amount":0.4,"optional":true}	}//加速液体
+	"ammoTypes": {
+		"copper": {"type": "BasicBulletType",
+	"speed":6,
+    "height": 12,
+    "width": 7,
+	"damage":39,
+	"splashDamageRadius": 28.00,
+    "splashDamage": 20.00,
+	"inaccuracy":0,
+	"lifetime": 39,
+	"reloadMultiplier":1.1,
+	
+	"trailParam": 4,
+    "trailLength": 5,
+    "trailWidth": 1.5,
+    "trailColor": "FEB280",
+    "backColor": "FEB280",
+    "frontColor": "FEC198",},
+    	"lead": {"type": "BasicBulletType",
+	"speed":6.5,
+    "height": 12,
+    "width": 7,
+	"damage":37,
+	"splashDamageRadius": 25.00,
+    "splashDamage": 18.00,
+	"inaccuracy":0,
+	"lifetime": 37,
+	"reloadMultiplier":1.2,
+	
+	"trailParam": 4,
+    "trailLength": 5,
+    "trailWidth": 1.5,
+    "trailColor": "D0BAFF",
+    "backColor": "D0BAFF",
+    "frontColor": "D0BAFF",},
+    		"graphite": {"type": "BasicBulletType",
+	"speed":5,
+    "height": 12,
+    "width": 7,
+	"damage":46,
+	"splashDamageRadius": 30.00,
+    "splashDamage": 21.00,
+	"inaccuracy":0,
+	"lifetime": 43,
+	"reloadMultiplier":0.85,
+	
+	"trailParam": 4,
+    "trailLength": 5,
+    "trailWidth": 1.5,
+    "trailColor": "B0CBFF",
+    "backColor": "B0CBFF",
+    "frontColor": "B0CBFF",},
+			}
+		}

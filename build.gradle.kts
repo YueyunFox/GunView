@@ -11,7 +11,7 @@ sourceSets.main{
 // - latest: depend on the latest release of mindustry
 // - be: depend on the very latest commit of mindustry
 // - v<number>: depend on a specific version
-val mindustryVersion = "v160"
+val mindustryVersion = "v146"
 val isWindows = System.getProperty("os.name").lowercase().contains("windows")
 val sdkRoot: String? = System.getenv("ANDROID_HOME") ?: System.getenv("ANDROID_SDK_ROOT")
 val projectName = project.name
