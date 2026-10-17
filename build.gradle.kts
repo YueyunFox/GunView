@@ -19,29 +19,16 @@ val projectName = project.name
 repositories{
     mavenCentral()
 
-    //Downloads the dependencies JAR file from Mindustry releases; does not use any real repository. Surprisingly, this is the most reliable option.
+    //v146 的 release 里没有 dependencies.jar，只有 Mindustry.jar，所以直接指向它
     ivy{
         url = uri("https://github.com/")
         patternLayout{
-            val pattern = when(mindustryVersion){
-                "latest" -> "/[organisation]/[module]/releases/[revision]/download/dependencies.jar" //latest stable release
-                "be" -> "/[organisation]/[module]/releases/download/master/[revision].jar" //latest commit (BE)
-                else -> "/[organisation]/[module]/releases/download/[revision]/dependencies.jar" //specific release
-            }
-            val path = pattern.substring(0, pattern.lastIndexOf('/'))
-
-            artifact("$path/[classifier].jar")
-            artifact(pattern.replaceFirst(Regex("""\.jar$"""), "(-[classifier]).jar"))
+            artifact("/[organisation]/[module]/releases/download/[revision]/Mindustry.jar")
         }
         metadataSources{ artifact() }
 
         content{
-            if(mindustryVersion == "be"){
-                //BE artifact version is always 'latest'
-                includeVersion("Anuken", "MindustryBuilds", "latest")
-            }else{
-                includeVersion("Anuken", "Mindustry", mindustryVersion)
-            }
+            includeVersion("Anuken", "Mindustry", mindustryVersion)
         }
     }
 }
