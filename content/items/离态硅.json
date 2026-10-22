@@ -1,0 +1,13 @@
+{
+	"name": "离态硅",
+	"hardness": 3,
+	"cost": 1.75,
+	"healthScaling": 0.6,
+	"alwaysUnlocked": false,
+	"color": "8694B3",
+	"radioactivity": 0.5,
+	"explosiveness": 0,
+	"flammability": 0,
+	"charge": 0.6,
+	"research": "silicon"
+}
