@@ -42,6 +42,8 @@ public class MortarBulletType extends BulletType {
     public float fallbackRange = 200f;
     public MortarBulletType(float range,boolean prediction,BulletType bullet) {
         this.bullet = bullet;
+        fragBullet = bullet;//子弹显示用的
+        fragBullets = 1;
         this.maxFallRange=range;
         this.prediction=prediction;
 
@@ -55,10 +57,12 @@ public class MortarBulletType extends BulletType {
         hittable = false;
         reflectable = false;
         absorbable = false;
+        despawnHit = false;
 
-        lifetime = uptime + falltime + flytime + 5;
+        lifetime = hitdelay + 60;
         speed = 0;
         hitSize = 0;
+        damage = 0;
     }
     @Override
     public void init(Bullet b){

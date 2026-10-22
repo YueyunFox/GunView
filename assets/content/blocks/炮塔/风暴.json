@@ -1,5 +1,4 @@
-{
-"type": "ItemTurret",//类型
+{   "type": "ItemTurret",//类型
 	"category": "turret",//菜单栏
 	"name": "风暴",//名字
 	"description": "快速发射子弹，子弹爆炸后产生破片穿透敌人",//介绍
@@ -29,7 +28,7 @@
 	"reload": 11,//装填速度
 	"ammoPerShot":1,//单发消耗
 	"shootSound": "artillery",//发射音效
-	"range": 410,//范围
+	"range": 320,//范围
 	"inaccuracy":1,//不准确度
 	"cooldownTime": 30,
 	"shoot":{"shots":2,//每轮子弹
@@ -185,28 +184,31 @@
         "colorFrom": "FBFFB1",
         "colorTo": "9CB562"},
         
-            "fragBullets": 5,
-            "fragAngle": 0,
-            "fragRandomSpread": 30,
-            "fragVelocityMin": 1,
-            "fragVelocityMax": 1,
-            "fragLifeMin": 1,
-            "fragLifeMax": 1
-            "fragOnDespawn": false
-		            "fragBullet": {
-		"type": "BasicBulletType",
-	"speed":5,
-    "height": 12,
+        "fragBullets": 5,
+        "fragAngle": 0,
+        "fragRandomSpread": 30,
+        "fragVelocityMin": 1,
+        "fragVelocityMax": 1,
+        "fragLifeMin": 1,
+        "fragLifeMax": 1,
+        "fragOnHit": true,
+        "despawnHit": false,
+        "setDefaults": false,
+        "fragBullet": {
+    "type": "BasicBulletType",
+    "speed": 5, 
+    "height": 12, 
     "width": 4,
-	"damage":20,
-	"inaccuracy":0,
-	"lifetime": 18,
-	"pierce": true,
-	"pierceCap": 2,
-	"backColor": "FBFFB1",
+    "damage": 20, 
+    "inaccuracy": 0, 
+    "lifetime": 18,
+    "pierce": true, 
+    "pierceCap": 2,
+    "backColor": "FBFFB1", 
     "frontColor": "9CB562"
-		     }},
-		     	"surge-alloy": {"type": "BasicBulletType",
+    }
+		     }
+		     	"surge-alloy": {"type": "BasicBulletType"
 	"speed":8,
     "height": 14,
     "width": 8,
@@ -226,9 +228,9 @@
 	"trailParam": 3,
     "trailLength": 3,
     "trailWidth": 2,
-    "trailColor": "FCF387FF",
-    "backColor": "FCF387FF",
-    "frontColor": "FBFFB1",
+    "trailColor": "F2E877",
+    "backColor": "F2E877",
+    "frontColor": "F2E877",
     
     "shootEffect": {
         "type": "ParticleEffect",
@@ -241,29 +243,31 @@
         "lenTo": 0,
         "strokeFrom": 2,
         "strokeTo": 0,
-        "colorFrom": "FBFFB1",
-        "colorTo": "FCF387FF"},
+        "colorFrom": "F2E877",
+        "colorTo": "F2E877"},
         
-            "fragBullets": 5,
-            "fragAngle": 0,
-            "fragRandomSpread": 30,
-            "fragVelocityMin": 1,
-            "fragVelocityMax": 1,
-            "fragLifeMin": 1,
-            "fragLifeMax": 1
-            "fragOnDespawn": false
-		            "fragBullet": {
+    "fragBullets": 5,
+    "fragAngle": 0,
+    "fragRandomSpread": 30,
+    "fragVelocityMin": 1,
+    "fragVelocityMax": 1,
+    "fragLifeMin": 1,
+    "fragLifeMax": 1,
+    "fragOnHit": true,
+    "despawnHit": false,
+    "setDefaults": false,
+    "fragBullet": {
 		"type": "BasicBulletType",
-	"speed":5,
-    "height": 12,
-    "width": 4,
-	"damage":20,
-	"inaccuracy":0,
-	"lifetime": 18,
-	"pierce": true,
-	"pierceCap": 2,
-	"backColor": "FBFFB1",
-    "frontColor": "FBFFB1"
+		"speed":5,
+		"height": 12,
+		"width": 4,
+		"damage":20,
+		"inaccuracy":0,
+		"lifetime": 18,
+		"pierce": true,
+		"pierceCap": 2,
+		"backColor": "F2E877",
+		"frontColor": "F2E877"
 		     }}
 	}
 }

@@ -1,5 +1,4 @@
-{
-	"type": "ItemTurret",//类型
+{   "type": "ItemTurret",//类型
 	"category": "turret",//菜单栏
 	"name": "阻力",//名字
 	"description": "发射穿甲弹，对敌人的进攻形成阻力。",//介绍

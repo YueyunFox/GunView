@@ -36,11 +36,11 @@ public class blocks {
                     suppressionRange = 10;
                     suppressionDuration = 60f * 5f;
                     //火焰
-                    incendAmount = 90;
+                    incendAmount = 120;
                     incendSpread = splashDamageRadius + 10;//生成范围
                     incendChance = 0.5f;//生成概率
                     //液体坑
-                    puddles = 130;
+                    puddles = 145;
                     puddleRange = splashDamageRadius + 10;
                     puddleAmount = 35f;//液体量
                     puddleLiquid = Liquids.slag;

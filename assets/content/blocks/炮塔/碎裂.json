@@ -1,5 +1,4 @@
-{
-"type": "ItemTurret",//类型
+{   "type": "ItemTurret",//类型
 	"category": "turret",//菜单栏
 	"name": "碎裂",//名字
 	"description": "快速发射高射炮弹，在空中碎裂成多发弹丸拦截空军。",//介绍

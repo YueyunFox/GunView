@@ -1,0 +1,148 @@
+{   "type": "ItemTurret",//类型
+	"category": "turret",//菜单栏
+	"name": "聚变",//名字
+	"description": "发射一枚易被拦截的钍反应导弹，对远处敌人造成严重损伤。",//介绍
+	"details":"谁不想发射一枚超级无敌宇宙雷霆核导弹(",
+	"health": 4850,
+	"size": 5,
+	"reload": 850,
+    "research": {
+    "parent": "cyclone",
+    "requirements": [
+    "copper/2000",
+	"lead/2000",
+	"graphite/2000",
+	"silicon/2000",
+	"thorium/2000",
+	"titanium/2000"
+    ]
+    },
+    "requirements": [
+	{ "item":"copper","amount":2600}
+	{ "item":"silicon","amount":1200}
+	{ "item":"titanium","amount":1600}
+	{ "item":"thorium","amount":1240}	],
+	"maxAmmo":200,
+	"ammoPerShot":200
+	"consumes": {
+        "power": 500,
+        "liquid": {
+            "liquid": "water",
+            "amount": 4},}
+    "range": 1100,
+	"fogRadiusMultiplier": 0.16,
+	"recoilTime": 180,
+	"recoil": 4,
+	"shootSound": "missileLaunch",
+	"shootWarmupSpeed": 0.08,
+	"warmupMaintainTime": 600,
+	"minWarmup": 0.9,
+    "targetGround": true,
+	"targetAir": false,
+	"canOverdrive": false,
+	"accurateDelay": false,
+	"inaccuracy": 0,
+	"rotateSpeed": 1.25,
+	"shootCone": 360,
+	"shootType": {
+		"ammoMultiplier": 1,
+		"homingDelay": 180,
+		"smokeEffect": "bigShockwave",
+		"speed": 0,
+		"spawnUnit": "聚变-导弹"
+	},
+
+  "ammoTypes": {
+    "thorium": {
+      "type": "MissileBulletType",
+      "spawnUnit": "聚变-导弹",
+      "damage": 0,
+      "speed": 0,
+      "lifetime": 1
+    }
+  }
+
+	"breakable": false,
+	"rebuildable": false,
+	"category": "turret"
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"outline": false,
+				"under": true,
+				"color": "FFFFFF",
+				"colorTo": "FFFFFF00",
+				"mixColorTo": "EEC591",
+				"mixColor": "FFFFFF00",
+				"suffix": "-导弹",
+				"progress": "reload",
+				"moves": [
+					{
+						"y": 8
+					}
+				]
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"under": true,
+				"suffix": "-1",
+				"moveX": 2,
+				"moveY": 2,
+				"moveRot": -9,
+				"moves": [
+					{
+						"progress": "recoil",
+						"y": -2,
+						"rot": -7
+					}
+				]
+			}
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"under": true,
+				"suffix": "-2",
+				"moveX": 4,
+				"moveY": -4,}
+		{
+				"type": "RegionPart",
+				"mirror": true,
+				"under": true,
+				"suffix": "-3",
+				"moveX": 5,
+				"moveY": -7,}
+		]
+	},
+	"shootY": 8,
+	"shootEffect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "ParticleEffect",
+				"particles": 32,
+				"interp": "fastSlow",
+				"sizeFrom": 12,
+				"sizeTo": 0,
+				"length": 125,
+				"baseLength": 0,
+				"lifetime": 123,
+				"colorFrom": "EEC591",
+				"colorTo": "FFFFFF",
+				"cone": 40
+			},
+			{
+				"type": "WaveEffect",
+				"lifetime": 22,
+				"sizeFrom": 0,
+				"sizeTo": 100,
+				"strokeFrom": 18,
+				"strokeTo": 0,
+				"colorFrom": "EEC59180",
+				"colorTo": "FFFFFF80"
+			}
+		]
+	},
+}
