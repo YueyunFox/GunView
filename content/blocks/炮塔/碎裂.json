@@ -1,0 +1,242 @@
+{   "type": "ItemTurret",//类型
+	"category": "turret",//菜单栏
+	"name": "碎裂",//名字
+	"description": "快速发射高射炮弹，在空中碎裂成多发弹丸拦截空军。",//介绍
+	"details":"可编程榴霰弹？",
+	"research": {
+    "parent": "salvo",
+    "requirements": [
+    "copper/2000",
+	"lead/2000",
+	"graphite/2000",
+	"silicon/2000",
+	"thorium/2000",
+	"titanium/2000"
+    ]
+    },
+	"drawer": {
+	"type": "drawTurret"},
+	"requirements": [
+	{ "item":"copper","amount":290}
+	{ "item":"silicon","amount":48}
+	{ "item":"titanium","amount":54}
+	{ "item":"thorium","amount":18}	],
+	"size": 3,//大小
+	"health": 1150,//血量
+	"rotateSpeed": 4.1,//转头速度
+	"maxAmmo":50,//弹药容量
+	"reload": 8,//装填速度
+	"ammoPerShot":1,//单发消耗
+	"shootSound": "shoot",//发射音效
+	"range": 320,//范围
+	"inaccuracy":1,//不准确度
+	"shoot":{"shots":1,//每轮子弹
+		"shotDelay":2}//子弹间隔
+    "targetGround": false,
+    "targetAir": true,
+	"consumes": {//消耗
+	"coolant":{"amount":0.1,"optional":true}	}//加速液体
+		"ammoTypes": {
+			"lead": {"type": "FlakBulletType",
+	"speed":7,
+    "height": 25,
+    "width": 9,
+	"damage":12,
+	"splashDamageRadius": 36.00,
+    "splashDamage": 12.00,
+	"inaccuracy":0,
+	"lifetime": 12,
+	"reloadMultiplier":1.0,
+	
+	"trailParam": 4,
+    "trailLength": 5,
+    "trailWidth": 3,
+    "trailColor": "D0BAFF",
+    "backColor": "D0BAFF",
+    "frontColor": "E6FCFF",
+    
+            "fragBullets": 10,
+            "fragAngle": 0,
+            "fragRandomSpread": 10,
+            "fragVelocityMin": 1,
+            "fragVelocityMax": 1,
+            "fragLifeMin": 1,
+            "fragLifeMax": 1
+           			"shootEffect": {
+        "type": "ParticleEffect",
+        "particles": 7,
+        "length": 40,
+        "lifetime": 22,
+        "line": true,
+        "cone": 25,
+        "lenFrom": 8,
+        "lenTo": 0,
+        "strokeFrom": 2,
+        "strokeTo": 0,
+        "colorFrom": "E6FCFF",
+        "colorTo": "D0BAFF"},
+		            "fragBullet": {
+		"type": "BasicBulletType",
+		"collidesGround": false,
+	"speed":6.5,
+    "height": 12,
+    "width": 4,
+	"damage":12,
+	"inaccuracy":0,
+	"lifetime": 40,
+	 "backColor": "D0BAFF",
+    "frontColor": "E6FCFF"
+		     }}
+			"copper": {"type": "FlakBulletType",
+	"speed":7,
+    "height": 25,
+    "width": 9,
+	"damage":13,
+	"splashDamageRadius": 38.00,
+    "splashDamage": 13.00,
+	"inaccuracy":0,
+	"lifetime": 12,
+	"reloadMultiplier":1.0,
+	
+	"trailParam": 4,
+    "trailLength": 5,
+    "trailWidth": 3,
+    "trailColor": "D89D73",
+    "backColor": "D89D73",
+    "frontColor": "EAC0A8",
+    
+            "fragBullets": 10,
+            "fragAngle": 0,
+            "fragRandomSpread": 10,
+            "fragVelocityMin": 1,
+            "fragVelocityMax": 1,
+            "fragLifeMin": 1,
+            "fragLifeMax": 1
+           			"shootEffect": {
+        "type": "ParticleEffect",
+        "particles": 7,
+        "length": 40,
+        "lifetime": 22,
+        "line": true,
+        "cone": 25,
+        "lenFrom": 8,
+        "lenTo": 0,
+        "strokeFrom": 2,
+        "strokeTo": 0,
+        "colorFrom": "D89D73",
+        "colorTo": "EAC0A8"},
+		            "fragBullet": {
+		"type": "BasicBulletType",
+		"collidesGround": false,
+	"speed":6.5,
+    "height": 12,
+    "width": 4,
+	"damage":13,
+	"inaccuracy":0,
+	"lifetime": 40,
+	 "backColor": "D89D73",
+    "frontColor": "EAC0A8"
+		     }}
+			"titanium": {"type": "FlakBulletType",
+	"speed":7,
+    "height": 25,
+    "width": 9,
+	"damage":18,
+	"splashDamageRadius": 40.00,
+    "splashDamage": 18.00,
+	"inaccuracy":0,
+	"lifetime": 12,
+	"reloadMultiplier":1.0,
+	
+	"trailParam": 4,
+    "trailLength": 5,
+    "trailWidth": 3,
+    "trailColor": "9DB2FAFF",
+    "backColor": "9DB2FAFF",
+    "frontColor": "E6FCFF",
+    
+            "fragBullets": 11,
+            "fragAngle": 0,
+            "fragRandomSpread": 10,
+            "fragVelocityMin": 1,
+            "fragVelocityMax": 1,
+            "fragLifeMin": 1,
+            "fragLifeMax": 1
+           			"shootEffect": {
+        "type": "ParticleEffect",
+        "particles": 7,
+        "length": 40,
+        "lifetime": 22,
+        "line": true,
+        "cone": 25,
+        "lenFrom": 8,
+        "lenTo": 0,
+        "strokeFrom": 2,
+        "strokeTo": 0,
+        "colorFrom": "E6FCFF",
+        "colorTo": "9DB2FAFF"},
+		            "fragBullet": {
+		"type": "BasicBulletType",
+		"collidesGround": false,
+	"speed":6.5,
+    "height": 12,
+    "width": 4,
+	"damage":18,
+	"inaccuracy":0,
+	"lifetime": 40,
+	 "backColor": "9DB2FAFF",
+    "frontColor": "E6FCFF"
+		     }}
+		    			"plastanium": {"type": "FlakBulletType",
+	"speed":7,
+    "height": 25,
+    "width": 9,
+	"damage":20,
+	"splashDamageRadius": 36.00,
+    "splashDamage": 20.00,
+	"inaccuracy":0,
+	"lifetime": 12,
+	"reloadMultiplier":1.0,
+	
+	"trailParam": 4,
+    "trailLength": 5,
+    "trailWidth": 3,
+    "trailColor": "9CB562",
+    "backColor": "9CB562",
+    "frontColor": "FBFFB1",
+    
+            "fragBullets": 11,
+            "fragAngle": 0,
+            "fragRandomSpread": 10,
+            "fragVelocityMin": 1,
+            "fragVelocityMax": 1,
+            "fragLifeMin": 1,
+            "fragLifeMax": 1
+           			"shootEffect": {
+        "type": "ParticleEffect",
+        "particles": 7,
+        "length": 40,
+        "lifetime": 22,
+        "line": true,
+        "cone": 25,
+        "lenFrom": 8,
+        "lenTo": 0,
+        "strokeFrom": 2,
+        "strokeTo": 0,
+        "colorFrom": "FBFFB1",
+        "colorTo": "9CB562"},
+		            "fragBullet": {
+		"type": "BasicBulletType",
+		"collidesGround": false,
+	"speed":6.5,
+    "height": 12,
+    "width": 4,
+	"damage":20,
+	"inaccuracy":0,
+	"lifetime": 40,
+	 "backColor": "FBFFB1",
+    "frontColor": "9CB562"
+		     }} 
+	
+		}
+	}

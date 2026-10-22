@@ -1,0 +1,295 @@
+{	"type": "ItemTurret",//类型
+	"category": "turret",//菜单栏
+	"name": "焚烧",//名字
+	"description": "消耗大量可燃物焚烧任何试图靠近的敌人。",//介绍
+	"details":"好丑",
+	"research": {
+    "parent": "scorch",
+    "requirements": [
+    "copper/2000",
+	"lead/2000",
+	"graphite/2000",
+	"silicon/2000"
+    ]
+    },
+    	"drawer": {
+	"type": "drawTurret"},
+	"requirements": [
+	{ "item":"copper","amount":130}
+	{ "item":"lead","amount":80}
+	{ "item":"silicon","amount":40}	],
+	"size": 2,//大小
+	"health": 850,//血量
+	"rotateSpeed": 5.1,//转头速度
+	"maxAmmo":20,//弹药容量
+	"reload": 5,//装填速度
+	"ammoPerShot":1,//单发消耗
+	"shootSound": "flame",//发射音效
+	"range": 170,//范围
+	"inaccuracy": 0.0,//不准确度
+	"shoot":{"shots": 1,//每轮子弹
+		"shotDelay": 2}//子弹间隔
+	"consumes": {//消耗
+	"coolant":{"amount":0.09,"optional":true}	}//加速液体
+			"ammoTypes": {
+"coal": {
+			"type": "BulletType",
+			"damage": 38,
+			"hitSize": 12,
+			"pierceBuilding": true,
+			"hittable": false,
+			"absorbable": false,
+			"pierce": true,
+			"status": "burning",
+			"statusDuration": 360,
+			"speed": 10,
+			"lifetime": 17,
+			"ammoMultiplier": 6,
+			"shootEffect": [{
+				"type": "ParticleEffect",
+				"particles": 25,
+				"lifetime": 22,
+				"sizeFrom": 1.58,
+				"sizeTo": 0.2,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"length": 185,
+				"baseLength": 3,
+				"colorFrom": "FAC458",
+				"colorTo": "EB8145",
+				"cone": 6
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 15,
+				"lifetime": 28,
+				"sizeFrom": 2.18,
+				"sizeTo": 0.2,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"length": 85,
+				"baseLength": 3,
+				"colorFrom": "FAC458",
+				"colorTo": "EB8145",
+				"cone": 11
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 40,
+				"lifetime": 31,
+				"sizeFrom": 1.88,
+				"sizeTo": 0.2,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"length": 185,
+				"baseLength": 3,
+				"colorFrom": "FAC458",
+				"colorTo": "EB8145",
+				"cone": 3
+			},]
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 0,
+						"line": true,
+						"strokeFrom": 3.3,
+						"strokeTo": 0,
+						"lenFrom": 8,
+						"lenTo": 8,
+						"length": 24,
+						"baseLength": 0,
+						"lifetime": 50,
+						"colorFrom": "f8ad42",
+						"colorTo": "FFE176",
+						"cone": 23
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 6,
+						"lifetime": 22,
+						"sizeFrom": 5,
+						"sizeTo": 0,
+						"colorFrom": "FF8C00",
+						"colorTo": "FF8C00"
+					}
+				]
+			},
+			"despawnEffect": "none"
+    }
+"pyratite": {
+			"type": "BulletType",
+			"damage": 84,
+			"hitSize": 16,
+			"pierceBuilding": true,
+			"hittable": false,
+			"absorbable": false,
+			"pierce": true,
+			"status": "burning",
+			"statusDuration": 480,
+			"speed": 10,
+			"lifetime": 18,
+			"ammoMultiplier": 6,
+			"shootEffect": [{
+				"type": "ParticleEffect",
+				"particles": 25,
+				"lifetime": 22,
+				"sizeFrom": 1.58,
+				"sizeTo": 0.2,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"length": 190,
+				"baseLength": 3,
+				"colorFrom": "FAC458",
+				"colorTo": "EB8145",
+				"cone": 6
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 15,
+				"lifetime": 28,
+				"sizeFrom": 2.18,
+				"sizeTo": 0.2,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"length": 85,
+				"baseLength": 3,
+				"colorFrom": "FAC458",
+				"colorTo": "EB8145",
+				"cone": 14
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 40,
+				"lifetime": 31,
+				"sizeFrom": 1.88,
+				"sizeTo": 0.2,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"length": 185,
+				"baseLength": 3,
+				"colorFrom": "FAC458",
+				"colorTo": "EB8145",
+				"cone": 3
+			},]
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 0,
+						"line": true,
+						"strokeFrom": 3.3,
+						"strokeTo": 0,
+						"lenFrom": 8,
+						"lenTo": 8,
+						"length": 24,
+						"baseLength": 0,
+						"lifetime": 50,
+						"colorFrom": "f8ad42",
+						"colorTo": "FFE176",
+						"cone": 23
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 6,
+						"lifetime": 22,
+						"sizeFrom": 5,
+						"sizeTo": 0,
+						"colorFrom": "FF8C00",
+						"colorTo": "FF8C00"
+					}
+				]
+			},
+			"despawnEffect": "none"
+    }
+    "spore-pod": {
+			"type": "BulletType",
+			"damage": 28,
+			"hitSize": 12,
+			"pierceBuilding": true,
+			"hittable": false,
+			"absorbable": false,
+			"pierce": true,
+			"status": "burning",
+			"statusDuration": 120,
+			"speed": 10,
+			"lifetime": 16,
+			"ammoMultiplier": 6,
+			"shootEffect": [{
+				"type": "ParticleEffect",
+				"particles": 25,
+				"lifetime": 22,
+				"sizeFrom": 1.58,
+				"sizeTo": 0.2,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"length": 160,
+				"baseLength": 3,
+				"colorFrom": "FAC458",
+				"colorTo": "EB8145",
+				"cone": 6
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 15,
+				"lifetime": 28,
+				"sizeFrom": 2.18,
+				"sizeTo": 0.2,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"length": 85,
+				"baseLength": 3,
+				"colorFrom": "FAC458",
+				"colorTo": "EB8145",
+				"cone": 11
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 40,
+				"lifetime": 31,
+				"sizeFrom": 1.88,
+				"sizeTo": 0.2,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"length": 160,
+				"baseLength": 3,
+				"colorFrom": "FAC458",
+				"colorTo": "EB8145",
+				"cone": 3
+			},]
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 0,
+						"line": true,
+						"strokeFrom": 3.3,
+						"strokeTo": 0,
+						"lenFrom": 8,
+						"lenTo": 8,
+						"length": 24,
+						"baseLength": 0,
+						"lifetime": 50,
+						"colorFrom": "f8ad42",
+						"colorTo": "FFE176",
+						"cone": 23
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 6,
+						"lifetime": 22,
+						"sizeFrom": 5,
+						"sizeTo": 0,
+						"colorFrom": "FF8C00",
+						"colorTo": "FF8C00"
+					}
+				]
+			},
+			"despawnEffect": "none"
+    }
+			}
+			
+    }
