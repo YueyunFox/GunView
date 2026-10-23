@@ -3,8 +3,6 @@ package z.fox;
 import arc.util.*;
 import mindustry.mod.*;
 
-import z.fox.blocks;
-
 public class GunView extends Mod{
 
     @Override
