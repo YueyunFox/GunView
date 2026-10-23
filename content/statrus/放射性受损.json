@@ -1,8 +1,0 @@
-{
-    "name": "放射性受损",
-    "description":"被钍反应导弹命中后受到的损伤",
-    "damage": 264.00,
-	"damageMultiplier":1,
-	"speedMultiplier":0.85,
-	"reloadMultiplier":0.85,
-}
